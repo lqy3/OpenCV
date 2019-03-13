@@ -1,0 +1,8 @@
+puttext(src,str,Point2d(pt.at<double>(i,0),pt.at<double>(i,1)),CV_FONT_HERSHEY_SIMPLEX,3,Scalar(0,0,255),6,8);
+第一个参数是：需要写字的原图像，
+第二个：需要写的内容，string类型的；
+第三个：需要写的内容的左下角的坐标
+第五个：字体大小
+第六个：颜色
+第七个：字体的厚度
+第八个：默认8
