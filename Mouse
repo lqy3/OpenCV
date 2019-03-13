@@ -1,0 +1,17 @@
+void onMouse( int event, int x, int y, int flags, void* param)
+ event :鼠标事件标号; x,y：鼠标坐标; flages: 拖拽和键盘的代号
+ event对应动作 : 
+                CV_EVENT_MOUSEMOVE      =0,
+                CV_EVENT_LBUTTONDOWN    =1,
+                CV_EVENT_RBUTTONDOWN    =2,
+                CV_EVENT_MBUTTONDOWN    =3,
+                CV_EVENT_LBUTTONUP      =4,
+                CV_EVENT_RBUTTONUP      =5,
+                CV_EVENT_MBUTTONUP      =6,
+                CV_EVENT_LBUTTONDBLCLK  =7,
+                CV_EVENT_RBUTTONDBLCLK  =8,
+                CV_EVENT_MBUTTONDBLCLK  =9,
+                CV_EVENT_MOUSEWHEEL     =10,
+                CV_EVENT_MOUSEHWHEEL    =11
+注册回调函数：在main函数中关联回调函数与变量（窗口和图像），这里建立回调函数与窗口original image的关联，并将图像image地址作为参数传递给回调函数
+setMouseCallbak("Window", onMouse, reinterpret_cast<void*>(&image));
